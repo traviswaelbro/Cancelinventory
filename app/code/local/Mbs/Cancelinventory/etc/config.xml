@@ -1,0 +1,33 @@
+<config>
+	<modules>
+		<Mbs_Abandonedcart>
+			<version>1.0.0</version>
+		</Mbs_Abandonedcart>
+	</modules>
+
+
+	<global>
+	    <events>
+	        <sales_order_save_after>
+	            <observers>
+	                <oncancel>
+	                    <type>singleton</type>
+	                    <class>Mbs_Cancelinventory_Model_Observer</class>
+	                    <method>salesOrderSaveAfter</method>
+	                </oncancel>
+	            </observers>
+	        </sales_order_save_after>
+	        <sales_order_delete_before>
+	        	<observers>
+	        		<ondelete>
+	                	<type>singleton</type>
+	                	<class>Mbs_Cancelinventory_Model_Observer</class>
+	                	<method>salesOrderDeleteBefore</method>
+	                </ondelete>
+	        	</observers>
+	        </sales_order_delete_before>
+	    </events>
+	</global>
+
+
+</config>

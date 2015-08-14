@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Mbs_Cancelinventory>
+      <active>true</active>
+      <codePool>local</codePool>
+    </Mbs_Cancelinventory>
+  </modules>
+</config>
